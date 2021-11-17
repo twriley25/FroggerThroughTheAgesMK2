@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/version notes.unity
     guid: c2377aabc85fd2a43931e4b158640b4b
+  - enabled: 1
+    path: Assets/Scenes/OldFrogger.unity
+    guid: fd7c70193e142474d9ffbd0bcc2123d5
   m_configObjects: {}

@@ -28,10 +28,26 @@ public class ButtonControls : MonoBehaviour
             SceneManager.LoadScene("Credits");
         }
 
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SceneManager.LoadScene("OldFrogger");
+        }
+
+        /*
+        if ((Input.GetKey(KeyCode.RightControl) || Input.GetKey(KeyCode.LeftControl)) && Input.GetKeyDown(KeyCode.Z))
+        {
+            // CTRL + Z
+        }
+        */
+
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
         }
+
+
+
 
     }
 }
