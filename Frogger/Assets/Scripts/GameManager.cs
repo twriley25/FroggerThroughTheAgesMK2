@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -128,7 +129,7 @@ public class GameManager : MonoBehaviour
         if (Cleared())
         {
             SetScore(score + 1000);
-            Invoke(nameof(NewLevel), 1f);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             SetTime(time + 60);
         }
         else

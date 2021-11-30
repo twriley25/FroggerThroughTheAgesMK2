@@ -9,7 +9,7 @@ public class NewGameButton : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.N))
         {
-            SceneManager.LoadScene("Sample Scene");
+            SceneManager.LoadScene("SampleScene");
         }
     }
 
