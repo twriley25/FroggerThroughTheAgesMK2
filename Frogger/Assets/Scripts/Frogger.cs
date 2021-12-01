@@ -10,10 +10,18 @@ public class Frogger : MonoBehaviour
     private Vector3 spawnPosition;
     private float farthestRow;
 
+    private AudioSource[] source;
+    private AudioSource leapSound;
+    private AudioSource deathSound;
+
+    
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        source = GetComponents<AudioSource>();
+        leapSound = source[0];
+        deathSound = source[1];
         spawnPosition = transform.position;
     }
 
@@ -88,6 +96,7 @@ public class Frogger : MonoBehaviour
         float elapsed = 0f;
         float duration = 0.125f;
 
+        leapSound.Play();
         spriteRenderer.sprite = leapSprite;
 
         while(elapsed < duration)
@@ -104,6 +113,7 @@ public class Frogger : MonoBehaviour
 
     public void Death()
     {
+        deathSound.Play();
         StopAllCoroutines();
         transform.rotation = Quaternion.identity;
         spriteRenderer.sprite = deadSprite;
