@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     {
         for(int i = 0; i < homes.Length; i++)
         {
-            homes[i].enabled = false;
+            homes[i].enabled = true;
         }
 
         Respawn();
@@ -144,7 +144,7 @@ public class GameManager : MonoBehaviour
         bool returnBool = true;
         for(int i = 0; i < homes.Length; i++)
         {
-            if(!homes[i].enabled)
+            if(homes[i].enabled)
             {
                 returnBool = false;
             }

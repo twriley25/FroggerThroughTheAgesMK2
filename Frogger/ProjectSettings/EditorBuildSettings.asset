@@ -15,11 +15,32 @@ EditorBuildSettings:
     path: Assets/Scenes/Title Screen.unity
     guid: f9aa92030e610aa4c8d009cccf9be459
   - enabled: 1
+    path: Assets/Scenes/LevelZeroCutscene.unity
+    guid: 994489a88ae9b13428db5f82276844c1
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/LevelPreOneCutscene.unity
+    guid: 2a4e0af7bc13d8d45972e6c13af3f7b4
+  - enabled: 1
+    path: Assets/Scenes/LevelOneCutscene.unity
+    guid: d0466aaff37371846957a8e6b6027917
+  - enabled: 1
     path: Assets/Scenes/LevelOne.unity
     guid: 7e670e5aef0cadb4d9e67713d43d8f58
+  - enabled: 1
+    path: Assets/Scenes/LevelPreTwoCutscene.unity
+    guid: 41ddf0812a1b2fb41820a428e722322c
+  - enabled: 1
+    path: Assets/Scenes/LevelTwoCutscene.unity
+    guid: 439d6355e3af3844e8138fad1cdfe742
+  - enabled: 1
+    path: Assets/Scenes/LevelTwo.unity
+    guid: 3bc9627bdcbff8f44a65a7cbb98e86be
+  - enabled: 1
+    path: Assets/Scenes/LevelPreThreeCutscene.unity
+    guid: 32a8365c92d9c074786a7a1fc12f8fc0
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 106977eb64dd29543b22670e033acca9

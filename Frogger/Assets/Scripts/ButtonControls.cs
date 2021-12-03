@@ -10,7 +10,12 @@ public class ButtonControls : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.N))
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("LevelZeroCutscene");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         if (Input.GetKeyDown(KeyCode.U))

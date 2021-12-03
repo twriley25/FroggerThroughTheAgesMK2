@@ -3,7 +3,18 @@ using UnityEngine;
 public class Home : MonoBehaviour
 {
     public GameObject homeFrog;
-    
+
+//    private SpriteRenderer spriteRenderer;
+//    private AudioSource batterySound;
+
+    /*
+    private void start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        batterySound = GetComponent<AudioSource>();
+    }
+    */
+
     private void OnEnable()
     {
         homeFrog.SetActive(true);
@@ -18,7 +29,8 @@ public class Home : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            enabled = true;
+//            batterySound.Play();
+            enabled = false;
             FindObjectOfType<GameManager>().HomeOccupied();
         }
     }
