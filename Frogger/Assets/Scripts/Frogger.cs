@@ -57,6 +57,7 @@ public class Frogger : MonoBehaviour
         Collider2D barrier = Physics2D.OverlapBox(destination, Vector2.zero, 0f, LayerMask.GetMask("Barrier"));
         Collider2D platform = Physics2D.OverlapBox(destination, Vector2.zero, 0f, LayerMask.GetMask("Platform"));
         Collider2D obstacle = Physics2D.OverlapBox(destination, Vector2.zero, 0f, LayerMask.GetMask("Obstacle"));
+        Collider2D water = Physics2D.OverlapBox(destination, Vector2.zero, 0f, LayerMask.GetMask("Water"));
 
         if (barrier != null)
         {
@@ -72,7 +73,7 @@ public class Frogger : MonoBehaviour
             transform.SetParent(null);
         }
 
-        if(obstacle != null && platform == null)
+        if(water != null && platform == null || obstacle != null)
         {
             transform.position = destination;
             Death();
@@ -135,7 +136,7 @@ public class Frogger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(enabled && other.gameObject.layer == LayerMask.NameToLayer("Obstacle") && transform.parent == null)
+        if(enabled && other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
         {
             Death();
         }

@@ -35,25 +35,20 @@ public class RoboJesusControl : MonoBehaviour
         int curScene = SceneManager.GetActiveScene().buildIndex;
         while (SceneManager.GetActiveScene().buildIndex == curScene)
         {
-            yield return new WaitForSeconds(.5f);
+            //start tracking
+            yield return new WaitForSeconds(1f);
             targetingSquare.SetActive(true);
             targetingSquare.transform.position = target.transform.position;
             targetingSquare.transform.SetParent(target.transform);
+            //lock in target
             yield return new WaitForSeconds(.5f);
             spriteRenderer.sprite = RTFJesus;
             targetingSquare.transform.SetParent(null);
-            /*
-            for (int i = 0; i < 5; i++)
-            {
-                targetingSquare.SetActive(true);
-                yield return new WaitForSeconds(1);
-                targetingSquare.SetActive(false);
-            }
-            */
-            yield return new WaitForSeconds(.25f);
+            //fire
+            yield return new WaitForSeconds(.5f);
             beam.transform.position = targetingSquare.transform.position;
             beam.SetActive(true);
-            
+            //beam residue
             spriteRenderer.sprite = NJesus;
             targetingSquare.SetActive(false);
             yield return new WaitForSeconds(0.5f);
